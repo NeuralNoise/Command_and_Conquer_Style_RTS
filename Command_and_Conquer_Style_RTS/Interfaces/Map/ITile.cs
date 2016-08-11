@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 {
-    interface ITile
+    public interface ITile
     {
         string GetTerrainDescription();
 

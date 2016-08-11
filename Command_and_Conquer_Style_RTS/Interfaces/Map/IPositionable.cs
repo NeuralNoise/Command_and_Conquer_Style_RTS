@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 {
-    interface IPositionable
+    public interface IPositionable
     {
         IPosition GetPosition();
         IPosition SetPosition();
+
+        IPosition Position {get;set; }
+
         ITile GetTileFromMap();
     }
 }

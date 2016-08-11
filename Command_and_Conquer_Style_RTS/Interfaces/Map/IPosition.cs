@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 {
-    interface IPosition
+    public interface IPosition
     {
         int GetX();
         void SetX(int x);
 
         int GetY();
         void SetY(int y);
+
+        int XPosition { get; set; }
+        int YPosition { get; set; }
     }
 }

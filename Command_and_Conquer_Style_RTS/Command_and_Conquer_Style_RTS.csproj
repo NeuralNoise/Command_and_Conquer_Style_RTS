@@ -63,12 +63,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Enums\Terrain\Direction.cs" />
+    <Compile Include="Enums\Terrain\TerrainType.cs" />
     <Compile Include="Interfaces\Common\ICollidable.cs" />
     <Compile Include="Interfaces\Common\IDescribable.cs" />
+    <Compile Include="Interfaces\Common\IDrawable.cs" />
+    <Compile Include="Interfaces\Common\IOwnable.cs" />
     <Compile Include="Interfaces\Common\ISavable.cs" />
+    <Compile Include="Interfaces\Common\IVisible.cs" />
     <Compile Include="Interfaces\Map\IPosition.cs" />
     <Compile Include="Interfaces\Map\IPositionable.cs" />
+    <Compile Include="Interfaces\Map\ITerrainTile.cs" />
     <Compile Include="Interfaces\Map\ITile.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\Buffs\IBuffable.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\Buffs\IBuffableByHp.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\Buffs\IBuffableByRevealDistance.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\Buffs\IBuffableByStrength.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\IDamageable.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\IHealable.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\IMovable.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\ActionsRecieved\IRecievesAction.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\IUnit.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\Properties\IHasHp.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\Properties\IHasScalableStrength.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\Properties\IHasStrength.cs" />
+    <Compile Include="Interfaces\Unit\CommonUnitInterfaces\Properties\IInvisible.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,8 +121,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Interfaces\Logic\" />
     <Folder Include="Interfaces\UI\" />
     <Folder Include="Interfaces\Unit\Building\" />
+    <Folder Include="Interfaces\Unit\CommonUnitInterfaces\ActionsPerformed\" />
     <Folder Include="Interfaces\Unit\Unit\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
