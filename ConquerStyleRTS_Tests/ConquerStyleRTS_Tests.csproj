@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITerrainTilesSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests.feature.cs">
       <AutoGen>True</AutoGen>
@@ -90,6 +91,12 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Tests.feature.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Command_and_Conquer_Style_RTS\Command_and_Conquer_Style_RTS.csproj">
+      <Project>{3B375E34-206D-4010-9711-EFFD26C4D515}</Project>
+      <Name>Command_and_Conquer_Style_RTS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

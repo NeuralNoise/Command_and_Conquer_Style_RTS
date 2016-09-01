@@ -15,6 +15,5 @@ namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 
         bool IsPassable { get; set; }
         bool BlocksDirectFire { get; set; }
-        
     }
 }

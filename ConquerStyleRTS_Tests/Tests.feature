@@ -1,11 +1,30 @@
 ﻿Feature: Tests
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	Ensuring terrain tiles 
 
 @mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: GetTerrainType returns terrain
+	Given I have a terrain tile
+	When I call the GetTerrainType method
+	Then A terrain type is returned
+
+Scenario: SetTerrainType int returns terrain
+	Given I have a terrain tile
+	When I call the SetTerrainType method with an int argument
+	Then the terrain type is set correctly
+
+Scenario: SetTerrainType enum returns terrain
+	Given I have a terrain tile
+	When I call the SetTerrainType method with an enum argument
+	Then the terrain type is set correctly
+
+
+Scenario: GetDefBonus returns terrain
+	Given I have a terrain tile
+	When I call the GetDefBonus
+	Then a double is returned
+
+
+Scenario: GetAtkBonus returns terrain
+	Given I have a terrain tile
+	When I call the GetAtkBonus
+	Then a double is returned
