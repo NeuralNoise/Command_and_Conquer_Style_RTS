@@ -6,6 +6,8 @@
         Mountain,
         Hills,
         Grasslands,
-        Water
+        Water,
+        Trenches,
+        Sandbags
     }
 }

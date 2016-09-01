@@ -6,9 +6,9 @@
         East,
         South,
         West,
-        North-East,
-        North-West,
-        South-East,
-        South-West
+        NorthEast,
+        NorthWest,
+        SouthEast,
+        SouthWest
     }
 }
