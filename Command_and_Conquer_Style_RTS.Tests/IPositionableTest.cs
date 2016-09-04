@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Command_and_Conquer_Style_RTS.Interfaces.Map;
 using Command_and_Conquer_Style_RTS.Enums.Terrain;
+using Command_and_Conquer_Style_RTS.Interfaces.Unit.CommonUnitInterfaces;
 
 namespace Command_and_Conquer_Style_RTS.Tests
 {
@@ -15,7 +16,22 @@ namespace Command_and_Conquer_Style_RTS.Tests
             IPosition pos = testsubject.Position;
             ITile tile = testsubject.GetTileFromMap();
 
-            tile.
+            IPosition testposition = tile.Position;
+
+            Assert.AreEqual(pos, testposition);
+        }
+        [TestMethod]
+        public void CanAddItemEmpty()
+        {
+            IUnit a = new StubIUnit
+            {
+
+            };
+            ITile tile = testsubject.GetTileFromMap();
+
+            IPosition testposition = tile.Position;
+
+            Assert.AreEqual(pos, testposition);
         }
     }
 }
