@@ -25,7 +25,7 @@ namespace ConquerStyleRTS_Tests
         [When(@"I call the SetTerrainType method with an int argument")]
         public void WhenICallTheSetTerrainTypeMethodWithAnIntArgument()
         {
-            testTile.
+
         }
         
         [When(@"I call the SetTerrainType method with an enum argument")]

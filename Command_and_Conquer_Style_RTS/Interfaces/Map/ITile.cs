@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Command_and_Conquer_Style_RTS.Interfaces.Unit.CommonUnitInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Command_and_Conquer_Style_RTS.Interfaces.Map
     public interface ITile
     {
         string GetTerrainDescription();
-
+        IPosition Position { get; set; }
         bool AddItem();
         bool CanAddItem(IUnit unit);
 
@@ -18,8 +19,7 @@ namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 
         void RenderTile();
 
-        ITerrainTile GetTerrain();
-        void SetTerrain();
+        ITerrainTile Terrain { get; set; }
 
         List<IUnit> GetUnitList();
         void SetUnitList(IEnumerable<IUnit> unitList);

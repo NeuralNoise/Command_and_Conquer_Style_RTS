@@ -8,10 +8,7 @@ namespace Command_and_Conquer_Style_RTS.Interfaces.Map
 {
     public interface IPositionable
     {
-        IPosition GetPosition();
-        IPosition SetPosition();
-
-        IPosition Position {get;set; }
+        IPosition Position { get;set; }
 
         ITile GetTileFromMap();
     }
