@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Command_and_Conquer_Style_RTS.Fakes">
+      <HintPath>FakesAssemblies\Command_and_Conquer_Style_RTS.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -45,7 +51,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -53,12 +61,16 @@
     <Compile Include="IPositionableTest.cs" />
     <Compile Include="ITerrainTilesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ITileTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Command_and_Conquer_Style_RTS\Command_and_Conquer_Style_RTS.csproj">
       <Project>{3B375E34-206D-4010-9711-EFFD26C4D515}</Project>
       <Name>Command_and_Conquer_Style_RTS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Fakes\Command_and_Conquer_Style_RTS.fakes" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
